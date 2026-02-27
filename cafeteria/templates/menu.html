@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Secret Menu</title>
+    <link rel="stylesheet" href="{% static 'cafeteria/menustyle.css' %}">
+  </head>
+
+  <body>
+
+    <main>
+
+      <!-- Page Heading -->
+      <h1>The Secret Menu (Classified)</h1>
+      <p>For Ewok eyes only.</p>
+
+      <!-- Menu Image -->
+      <img src="{% static 'images/menu-image.png' %}" alt="Secret Menu" />
+
+      <!-- Back to Home -->
+      <a href="{% url 'home' %}">Back to Home</a>
+
+    </main>
+
+  </body>
+
+</html>
