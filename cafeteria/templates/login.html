@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cafeteria Login</title>
+    <link rel="stylesheet" href="{% static 'cafeteria/style.css' %}">
+</head>
+<body>
+
+    <h1>Cafeteria Login</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <button type="submit">Login</button>
+    </form>
+
+    {% if form.errors %}
+        <p style="color: red;">Invalid username or password. Please try again.</p>
+    {% endif %}
+
+</body>
+</html>
